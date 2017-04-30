@@ -19,9 +19,8 @@ username:       pysnmp
 auth_key:        galileo1          
 encrypt_key:   galileo1
 
-pynet-rtr1    184.105.247.70    UDP 161
-​​​​​​​pynet-rtr2    184.105.247.71    UDP 161
 '''
+
 import pygal
 from snmp_helper import snmp_get_oid_v3, snmp_extract
 import time
