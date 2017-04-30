@@ -36,8 +36,8 @@ oid_fa4 = {
     }
 
 data_fa4 = {
-    'oct_in_fa4' : list(),
-    'oct_out_fa4' : list(),
+    'oct_in_fa4' : [],
+    'oct_out_fa4' : [],
     'uni_in_fa4' : [],
     'uni_out_fa4' : []
     }
@@ -45,7 +45,7 @@ data_fa4 = {
 
 for time_track in range(0, 65, 5):
     for oid in oid_fa4:
-        data_fa4['oct_in_fa4'] = data_fa4['oct_in_fa4'].append(snmp_get_oid_v3(pynet_rtr1, usuario, oid = oid_fa4['oid_oct_in_fa4']))
+        data_fa4['oct_in_fa4'] = data_fa4['oct_in_fa4'].append(snmp_get_oid_v3(pynet_rtr1, usuario, oid = oid['oid_oct_in_fa4']))
         data_fa4['oct_out_fa4'] = data_fa4['oct_out_fa4'].append(snmp_get_oid_v3(pynet_rtr1, usuario, oid = oid['oid_oct_out_fa4']))
         data_fa4['uni_in_fa4'] = data_fa4['uni_in_fa4'].append(snmp_get_oid_v3(pynet_rtr1, usuario, oid = oid['oid_uni_in_fa4']))
         data_fa4['uni_out_fa4'] = data_fa4['uni_out_fa4'].append(snmp_get_oid_v3(pynet_rtr1, usuario, oid = oid['oid_uni_out_fa4']))
